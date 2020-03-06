@@ -1,10 +1,10 @@
-FROM ybmsr/ubuntu-nodejs
+FROM ubuntu:latest
 
 MAINTAINER ybmsr <ybmadhu404@gmail.com>
 
 WORKDIR /usr/apps/hello-docker/
 
-RUN apt-get  update && apt-get -y install nodejs
+RUN apt-get -y install nodejs
 
 RUN apt-get -y install npm
 
