@@ -4,6 +4,8 @@ MAINTAINER ybmsr <ybmadhu404@gmail.com>
 
 WORKDIR /usr/apps/hello-docker/
 
+RUN sleep 60
+
 RUN apt-get -y install nodejs && sleep 300
 
 
