@@ -1,4 +1,4 @@
-FROM ubuntu-nodejs
+FROM ybmsr/ubuntu-nodejs
 
 MAINTAINER ybmsr <ybmadhu404@gmail.com>
 
