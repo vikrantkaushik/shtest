@@ -4,15 +4,13 @@ MAINTAINER ybmsr <ybmadhu404@gmail.com>
 
 WORKDIR /usr/apps/hello-docker/
 
-RUN sudo apt-get -y update
+RUN apt-get  update && apt-get -y install nodejs
 
-RUN sudo apt-get install -y nodejs
-
-RUN sudo apt-get install -y npm
+RUN apt-get -y install npm
 
 #RUN ln -s /usr/bin/nodejs /usr/bin/node........;;;;;
 
-RUN sudo npm install -g http-server
+RUN npm install -g http-server
 
 ADD . /usr/apps/hello-docker/
 
