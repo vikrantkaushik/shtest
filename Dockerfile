@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu-nodejs
 
 MAINTAINER ybmsr <ybmadhu404@gmail.com>
 
