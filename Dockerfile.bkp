@@ -1,12 +1,12 @@
-FROM centos
+FROM ybmsr/ubuntu-nodejs
 
-MAINTAINER lakhan
+MAINTAINER ybmsr <ybmadhu404@gmail.com>
 
 WORKDIR /usr/apps/hello-docker/
 
-RUN yum -y install nodejs 
+RUN apt-get -y install nodejs 
 
-RUN yum -y install npm 
+RUN apt-get -y install npm 
 
 #RUN ln -s /usr/bin/nodejs /usr/bin/node........;;;;;
 
