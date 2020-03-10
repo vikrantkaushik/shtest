@@ -12,7 +12,7 @@ if [ "$?" -ne 0 ]; then
     old_stty_admin=$(stty -g)
     stty raw -echo ; answer=$(head -c 1) ; stty $old_stty_admin # Careful playing with stty
     if echo "$answer" | grep -iq "^y" ;then
-       curl -u '$username:$userpassword' https://api.github.com/user/repos -d "{\"name\":\"$repo_name"admin"\"}"
+       curl -u $username:$userpassword https://api.github.com/user/repos -d "{\"name\":\"$repo_name"admin"\"}"
        mkdir $repo_name"admin"
        cd $repo_name"admin"
        echo test > README.md
@@ -31,7 +31,7 @@ if [ "$?" -ne 0 ]; then
     old_stty_osadmin=$(stty -g)
     stty raw -echo ; answer=$(head -c 1) ; stty $old_stty_osadmin # Careful playing with stty
     if echo "$answer" | grep -iq "^y" ;then
-       curl -u '$username:$userpassword' https://api.github.com/user/repos -d "{\"name\":\"$repo_name"osadmin"\"}"
+       curl -u $username:$userpassword https://api.github.com/user/repos -d "{\"name\":\"$repo_name"osadmin"\"}"
        mkdir $repo_name"osadmin"
        cd $repo_name"osadmin"
        echo test > README.md
@@ -50,7 +50,7 @@ if [ "$?" -ne 0 ]; then
     old_stty_devops=$(stty -g)
     stty raw -echo ; answer=$(head -c 1) ; stty $old_stty_devops # Careful playing with stty
     if echo "$answer" | grep -iq "^y" ;then
-       curl -u '$username:$userpassword' https://api.github.com/user/repos -d "{\"name\":\"$repo_name"devops"\"}"
+       curl -u $username:$userpassword https://api.github.com/user/repos -d "{\"name\":\"$repo_name"devops"\"}"
        mkdir $repo_name"devops"
        cd $repo_name"devops"
        echo test > README.md
